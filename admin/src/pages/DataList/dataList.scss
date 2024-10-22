@@ -1,0 +1,58 @@
+@import "./../../pallete.scss";
+
+.dataListContainer {
+  display: flex;
+
+  @media screen and (max-width: $layoutBreakpoint-md) {
+    flex-direction: column;
+  }
+
+  .dashboardPage {
+    flex: 6;
+
+    @media screen and (max-width: 1024px) {
+      flex: 5;
+    }
+
+    @media screen and (max-width: $layoutBreakpoint-md) {
+      width: 100vw;
+    }
+
+    .dataList {
+      padding-inline: 2rem;
+      padding-top: 2rem;
+
+      .tableCell {
+        .listInfoContainer {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          text-transform: capitalize;
+
+          .productImg {
+            width: 4rem;
+          }
+        }
+
+        span {
+          text-transform: capitalize;
+          &.positive {
+            color: $text;
+          }
+          &.warning {
+            color: $warning;
+          }
+          &.negative {
+            color: $negative;
+          }
+          &.active {
+            color: $positive;
+          }
+          &.inactive {
+            color: $negative;
+          }
+        }
+      }
+    }
+  }
+}

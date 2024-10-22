@@ -1,0 +1,169 @@
+@import "./../../pallete.scss";
+
+.menuBarContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+
+  .menuBar {
+    width: 90%;
+    padding: 0.5rem 3rem;
+    display: flex;
+    justify-content: center;
+    background: $secondary;
+    border-radius: 2rem;
+    overflow-x: auto;
+
+    @media screen and (max-width: 1241px) {
+      justify-content: flex-start;
+    }
+
+    @media screen and (max-width: $layoutBreakpoint-md) {
+      width: 100%;
+    }
+
+    &::-webkit-scrollbar {
+      background: none;
+      height: 0.4rem;
+      border-radius: 1.5rem;
+    }
+
+    .left,
+    .middle,
+    .right {
+      display: flex;
+      align-items: center;
+    }
+
+    .left {
+      justify-content: flex-start;
+    }
+
+    .right {
+      justify-content: flex-end;
+    }
+
+    .middle {
+      justify-content: center;
+    }
+
+    button {
+      position: relative;
+      width: 3.5rem;
+      height: 3.5rem;
+      border-radius: 0.75rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 0;
+      background: none;
+      color: #8389a6;
+      margin-right: 2rem;
+      font-size: 2rem;
+
+      &.is-active {
+        background: $accent;
+        color: $text;
+      }
+
+      &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+    }
+  }
+}
+
+.textEditorContainer {
+  padding: 3rem 1rem;
+  width: calc(100vw - 25%);
+  // height: 100%;
+  background: $dark;
+  border-radius: 1.5rem;
+  border: 3px solid #333645;
+
+  @media screen and (max-width: $layoutBreakpoint-md) {
+    width: 100%;
+  }
+}
+
+/* Basic editor styles */
+.ProseMirror {
+  min-height: 80vh;
+  padding: 1rem;
+  // outline: 2px solid #333645;
+  border-radius: 1rem;
+
+  &:focus,
+  &:active,
+  &:focus-visible {
+    outline: none;
+    outline: 2px solid #333645;
+    border-radius: 1rem;
+  }
+  > * + * {
+    margin-top: 0.75em;
+  }
+
+  ul,
+  ol {
+    padding: 0 2rem;
+  }
+
+  ul {
+    list-style-type: disc;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    line-height: 1.1;
+  }
+
+  code {
+    background-color: rgba(#939393, 0.1);
+    color: #a2a2a2;
+  }
+
+  pre {
+    background: #0d0d0d;
+    color: #fff;
+    font-family: "JetBrainsMono", monospace;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+
+    code {
+      color: inherit;
+      padding: 0;
+      background: none;
+      font-size: 0.8rem;
+    }
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  blockquote {
+    margin-left: 3rem;
+    padding-left: 2rem;
+    border-left: 2px solid #cbcbcb;
+  }
+
+  hr {
+    border: none;
+    border-top: 2px solid rgba(#0d0d0d, 0.1);
+    margin: 2rem 0;
+  }
+}
+
+#title {
+  font-size: 1.4rem;
+  color: $accent;
+  margin-bottom: 4rem;
+}

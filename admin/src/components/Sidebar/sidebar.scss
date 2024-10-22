@@ -1,0 +1,200 @@
+@import "./../../pallete.scss";
+
+.sidebarContainer {
+  flex: 1;
+  // min-width: calc(100% - 85%);
+  min-height: 100vh;
+  background: $secondary;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  padding-top: 2rem;
+  border-right: 2px solid $accent;
+
+  @media screen and (max-width: $layoutBreakpoint-md) {
+    display: none;
+  }
+
+  .top {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    border-bottom: 2px solid $accent;
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+
+    .title {
+      font-size: 2rem;
+      font-family: "Raleway", sans-serif;
+      letter-spacing: 2px;
+      margin-bottom: 1rem;
+    }
+
+    .subTitle {
+      font-size: 1.3rem;
+    }
+  }
+
+  .middle {
+    width: 100%;
+
+    .sidebarList {
+      list-style-type: none;
+
+      .listDivider {
+        font-size: 1.3rem;
+        font-weight: bold;
+        letter-spacing: 3px;
+        opacity: 0.5;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        text-transform: uppercase;
+        padding-left: 1.25rem;
+
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+
+      .active {
+        background: $accent;
+      }
+
+      .sidebarItem {
+        width: 100%;
+        font-size: 1.7rem;
+        margin-bottom: 1rem;
+        font-weight: 300;
+        letter-spacing: 1px;
+        padding: 0.5rem 0;
+        padding-left: 2.5rem;
+        transition: 200ms ease;
+        cursor: pointer;
+
+        &:hover {
+          background: $dark;
+        }
+
+        &:active {
+          background: $accent;
+        }
+
+        &.active {
+          &:hover {
+            background: #6947c7;
+          }
+        }
+      }
+    }
+  }
+}
+
+.navbarContainer {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 2.5rem;
+  width: 100%;
+  min-height: 7vh;
+  background: $secondary;
+  border-bottom: 2px solid $accent;
+
+  @media screen and (max-width: $layoutBreakpoint-md) {
+    display: flex;
+  }
+
+  .left {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: center;
+
+    .title {
+      font-family: "Raleway", sans-serif;
+      letter-spacing: 2px;
+      margin-bottom: 0.3rem;
+    }
+
+    .subTitle {
+      font-size: 1.1rem;
+    }
+  }
+
+  .right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    .icon {
+      font-size: 2rem;
+    }
+  }
+}
+
+.offcanvasBG {
+  background: $dark;
+
+  .sidebarList {
+    list-style-type: none;
+
+    .listDivider {
+      font-size: 1.3rem;
+      font-weight: bold;
+      letter-spacing: 3px;
+      opacity: 0.5;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      text-transform: uppercase;
+      padding-left: 1.25rem;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+
+    .active {
+      background: $accent;
+    }
+
+    .sidebarItem {
+      width: 100%;
+      font-size: 1.7rem;
+      margin-bottom: 1rem;
+      font-weight: 300;
+      letter-spacing: 1px;
+      padding: 0.5rem 0;
+      padding-left: 2.5rem;
+      transition: 200ms ease;
+      cursor: pointer;
+
+      &:hover {
+        background: $dark;
+      }
+
+      &:active {
+        background: $accent;
+      }
+    }
+  }
+}
+
+.offcanvasTitle {
+  display: flex;
+  flex-direction: column;
+
+  .title {
+    font-family: "Raleway", sans-serif;
+    font-size: 1.6rem;
+    letter-spacing: 1.5px;
+  }
+
+  .subTitle {
+    font-weight: 300;
+    letter-spacing: 1.25px;
+  }
+}

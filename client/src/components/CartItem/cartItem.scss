@@ -1,0 +1,86 @@
+@import "./../../pallete.scss";
+
+.cartItemContainer {
+  width: 100%;
+  min-height: 15rem;
+  max-height: 20rem;
+  background: #ededed;
+  display: flex;
+  margin-bottom: 2rem;
+
+  .left {
+    width: 30%;
+    height: 100%;
+    overflow: hidden;
+
+    .productImg {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .right {
+    width: 70%;
+    padding: 0.5rem 0.75rem;
+    font-family: "Roboto Mono", monospace;
+
+    .top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .productName {
+        width: 80%;
+        margin-bottom: 0;
+      }
+
+      .icon {
+        cursor: pointer;
+        font-size: 1.75rem;
+      }
+    }
+
+    .price {
+      font-size: 1.5rem;
+    }
+
+    .bottom {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-direction: column;
+      margin-top: 1rem;
+
+      .detailsContainer {
+        width: 100%;
+        display: flex;
+        font-size: 1.3rem;
+        margin-bottom: 0.5rem;
+
+        .detailTitle {
+          margin-right: 0.5rem;
+          margin-bottom: 0;
+        }
+
+        .detail {
+          margin-bottom: 0;
+        }
+
+        .quantityContainer {
+          display: flex;
+
+          .arrow {
+            margin-right: 0.5rem;
+            cursor: pointer;
+
+            &:last-child {
+              margin-right: 0;
+              margin-left: 0.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,102 @@
+@import "./../../pallete.scss";
+
+:root {
+  --mouse-x: 0px;
+  --mouse-y: 0px;
+}
+
+.widgetContainer {
+  width: 100%;
+  height: 100%;
+  background: $secondary;
+  border-radius: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 2rem;
+  position: relative;
+
+  &:hover {
+    &::before {
+      opacity: 1;
+    }
+  }
+
+  &::before {
+    border-radius: inherit;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(
+      80rem circle at var(--mouse-x) var(--mouse-y),
+      rgba(255, 255, 255, 0.06),
+      transparent 40%
+    );
+    opacity: 0;
+    transition: opacity 500ms;
+  }
+
+  #top {
+    width: 100%;
+    min-height: fit-content;
+    display: flex;
+
+    .left {
+      width: 70%;
+
+      .infoContainer {
+        .title {
+          font-size: 1.3rem;
+        }
+
+        .subTitle {
+          margin-top: 0.5rem;
+          font-size: 2.8rem;
+          letter-spacing: 1px;
+        }
+      }
+    }
+
+    .right {
+      width: 30%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-start;
+
+      .iconContainer {
+        width: 6rem;
+        height: 6rem;
+        background: $dark;
+        border-radius: 0.75rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .icon {
+          font-size: 2.5rem;
+          color: $accent;
+        }
+      }
+    }
+  }
+
+  .bottom {
+    width: 100%;
+
+    .infoBottom {
+      font-size: 1.35rem;
+
+      .positive {
+        color: $positive;
+      }
+
+      .negative {
+        color: $negative;
+      }
+    }
+  }
+}

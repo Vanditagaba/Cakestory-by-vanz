@@ -1,0 +1,156 @@
+@import "./../../pallete.scss";
+
+.footerContainer {
+  width: 100%;
+  min-height: 65vh;
+
+  .top {
+    width: 100%;
+    min-height: 20vh;
+    background: $secondaryColor;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $primaryColor;
+    padding: 1rem 6rem;
+
+    @media screen and (max-width: $layoutBreakpoint-md) {
+      flex-direction: column;
+      padding: 3rem 0;
+    }
+
+    .text {
+      font-size: 1.5rem;
+      letter-spacing: 2px;
+      font-weight: bold;
+      margin-right: 2rem;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      @media screen and (max-width: $layoutBreakpoint-hero) {
+        margin-right: 0;
+        margin-bottom: 4rem;
+        text-align: center;
+      }
+    }
+  }
+
+  .bottom {
+    width: 100%;
+    min-height: 35vh;
+    display: flex;
+    padding: 6rem 8rem;
+    text-align: left;
+
+    @media screen and (max-width: $layoutBreakpoint-hero) {
+      flex-direction: column;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .left {
+      width: 30%;
+
+      @media screen and (max-width: $layoutBreakpoint-hero) {
+        width: 100%;
+      }
+
+      .top {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+        background: $primaryColor !important;
+        color: $secondaryColor;
+        min-height: 35vh;
+
+        @media screen and (max-width: $layoutBreakpoint-hero) {
+          text-align: center;
+          align-items: center;
+        }
+
+        .heading {
+          font-size: 2.2rem;
+          font-weight: bold;
+          font-family: "Roboto Mono", monospace;
+          letter-spacing: 2px;
+          margin-bottom: 2rem;
+        }
+
+        .footerList {
+          list-style-type: none;
+          font-weight: 500;
+
+          .footerItem {
+            margin-bottom: 1.25rem;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    .middle {
+      width: 35%;
+
+      @media screen and (max-width: $layoutBreakpoint-hero) {
+        width: 100%;
+      }
+
+      .top {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+        background: $primaryColor;
+        color: $secondaryColor;
+        min-height: 35vh;
+
+        @media screen and (max-width: $layoutBreakpoint-hero) {
+          text-align: center;
+          align-items: center;
+        }
+
+        .heading {
+          font-size: 2.2rem;
+          font-weight: bold;
+          font-family: "Roboto Mono", monospace;
+          letter-spacing: 2px;
+          margin-bottom: 2rem;
+        }
+
+        .text {
+          font-size: 1.4rem;
+          margin-bottom: 1.5rem;
+          opacity: 0.7;
+        }
+
+        .newsletter {
+          width: 30rem;
+          padding: 0.5rem 1rem 0.5rem 0rem;
+          background: none;
+          border: 0;
+          border-bottom: 2px solid $secondaryColor;
+        }
+      }
+    }
+  }
+
+  .logo {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 15rem;
+
+    @media screen and (max-width: $layoutBreakpoint-hero) {
+      width: 100%;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

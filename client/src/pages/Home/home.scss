@@ -1,0 +1,365 @@
+@import "./../../pallete.scss";
+
+.heroSection {
+  width: 100%;
+  min-height: 92vh;
+  background: linear-gradient(-45deg, $primaryColor 50%, $secondaryColor 50%);
+  display: flex;
+  position: relative;
+
+  @media screen and (max-width: $layoutBreakpoint-hero) {
+    flex-direction: column;
+  }
+
+  .left {
+    width: 33%;
+    color: $primaryColor;
+    font-family: "Roboto Mono", monospace;
+    font-weight: 300;
+    text-transform: uppercase;
+    padding: 18rem 2rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    position: relative;
+
+    @media screen and (max-width: $layoutBreakpoint-hero) {
+      display: none;
+    }
+
+    .featured {
+      position: absolute;
+      top: 4rem;
+      letter-spacing: 3.5px;
+    }
+
+    .collectionName {
+      font-size: 6.5rem;
+      letter-spacing: 10.5px;
+      margin-bottom: 3.7rem;
+    }
+
+    .text {
+      margin-top: 5rem;
+      font-size: 1.5rem;
+    }
+  }
+
+  .middle {
+    // width: 40%;
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+
+    @media screen and (max-width: $layoutBreakpoint-hero) {
+      width: 100%;
+      height: 70vh;
+    }
+
+    .heroImg {
+      width: 80%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+
+      @media screen and (max-width: $layoutBreakpoint-hero) {
+        width: 50rem;
+        height: 90vh;
+      }
+    }
+  }
+
+  .right {
+    width: 27%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 4rem;
+
+    @media screen and (max-width: $layoutBreakpoint-hero) {
+      display: none;
+    }
+  }
+
+  .mobile {
+    display: none;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+
+    @media screen and (max-width: $layoutBreakpoint-hero) {
+      display: flex;
+    }
+
+    .top {
+      margin-top: 1rem;
+    }
+
+    .middle {
+      height: 28vh;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-direction: column;
+
+      .collectionName {
+        font-size: 2rem;
+        letter-spacing: 5.5px;
+      }
+
+      .text {
+        text-align: center;
+        font-size: 1.3rem;
+        text-transform: uppercase;
+
+        @media screen and (max-width: $layoutBreakpoint-hero) {
+          width: 65%;
+        }
+
+        @media screen and (max-width: 470px) {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.cta {
+  padding: 1rem 3rem;
+  transition: 200ms ease;
+  border: 2px solid $teritaryColor;
+
+  &:hover {
+    padding: 1rem 4rem;
+  }
+
+  &:not(alt) {
+    background: $secondaryColor;
+    color: $primaryColor;
+  }
+
+  &:active {
+    background: $teritaryColor;
+  }
+
+  &:not(.ctaRedirect) {
+    width: 100%;
+  }
+}
+
+.featuredClothes {
+  width: 100%;
+  min-height: 82vh;
+  padding: 0rem 0rem;
+
+  .top {
+    width: 100%;
+    border-top: 1px solid $secondaryColor;
+    border-bottom: 1px solid $secondaryColor;
+    overflow: hidden;
+
+    .featured {
+      width: fit-content;
+      margin: 1rem 2.5rem;
+      letter-spacing: 3.5px;
+    }
+  }
+
+  .bottom {
+    width: 100%;
+    min-height: 70vh;
+    padding: 8rem 8rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-x: auto;
+
+    @media screen and (max-width: $layoutBreakpoint-md) {
+      padding: 8rem 2rem;
+    }
+
+    &::-webkit-scrollbar {
+      height: 1rem;
+      background: $primaryColor;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: $teritaryColor;
+    }
+
+    .primaryContainer {
+      min-width: 30rem;
+      max-width: 30rem;
+      height: 55rem;
+      border: 1px solid $secondaryColor;
+      margin-right: 1.75rem;
+    }
+  }
+}
+
+.category {
+  width: 100%;
+  min-height: 85vh;
+  display: flex;
+  padding: 4rem 0 0 0;
+
+  @media screen and (max-width: $layoutBreakpoint-hero) {
+    min-height: 70vh;
+  }
+
+  .left {
+    width: 45%;
+    padding: 0 2rem;
+    font-family: "Roboto Mono", monospace;
+    @media screen and (max-width: $layoutBreakpoint-md) {
+      width: 100%;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .heading {
+      font-size: 4rem;
+      font-weight: 300;
+      letter-spacing: 5px;
+      margin-bottom: 15rem;
+
+      @media screen and (max-width: $layoutBreakpoint-hero) {
+        margin-bottom: 4rem;
+      }
+    }
+
+    .text {
+      margin-bottom: 7rem;
+    }
+
+    .ctaContainer {
+      width: 50%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      @media screen and (max-width: 466px) {
+        width: 100%;
+        padding: 0 2rem;
+      }
+    }
+  }
+
+  .right {
+    width: 55%;
+    position: relative;
+
+    @media screen and (max-width: $layoutBreakpoint-md) {
+      display: none;
+    }
+
+    .hover {
+      filter: grayscale(0) !important;
+    }
+
+    .men {
+      position: absolute;
+      width: 70%;
+      left: 0;
+      bottom: 0;
+      transform: scaleX(-1);
+      filter: grayscale(1);
+      transition: 200ms ease;
+    }
+
+    .women {
+      position: absolute;
+      width: 55%;
+      right: 0;
+      bottom: 0;
+      filter: grayscale(1);
+      transition: 200ms ease;
+      z-index: 2;
+    }
+  }
+}
+
+.subCategory {
+  width: 100%;
+  min-height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 5rem;
+  font-family: "Roboto Mono", monospace;
+  overflow-x: auto;
+
+  @media screen and (max-width: 1024px) {
+    justify-content: flex-start;
+  }
+
+  .catCol {
+    min-width: 20rem;
+    width: 20rem;
+    height: 70vh;
+    border: 2px solid $secondaryColor;
+    margin-right: 5rem;
+    position: relative;
+
+    &:hover {
+      .catImg {
+        filter: grayscale(0);
+        height: 60%;
+      }
+    }
+
+    .catImg {
+      width: 100%;
+      height: 50%;
+      object-fit: cover;
+      object-position: bottom;
+      filter: grayscale(1);
+      transition: 200ms ease;
+    }
+
+    .catName {
+      position: absolute;
+      bottom: 0rem;
+      left: 50%;
+      transform: translate(-50%, -70%) rotate(-90deg);
+      font-size: 3rem;
+      font-weight: 300;
+      text-align: left;
+      width: 10rem;
+      height: fit-content;
+    }
+  }
+}
+
+.modal-header,
+.modal-footer {
+  border: 0;
+}
+
+.modalBody {
+  width: 100%;
+  height: 30rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .modalInner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .icon {
+      font-size: 7.5rem;
+      margin-bottom: 2rem;
+      color: $teritaryColor;
+    }
+  }
+}

@@ -1,0 +1,300 @@
+@import "./../../pallete.scss";
+
+.uploadContainer {
+  min-height: 75vh;
+  background: $dark;
+  margin-bottom: 3rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  .primaryContainer {
+    width: 100%;
+    min-height: 60vh;
+
+    .primaryUploadContainer {
+      width: 100%;
+      min-height: 60vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-bottom: 3px solid #333645;
+
+      .primaryUpload {
+        width: 100%;
+        height: 60vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        position: relative;
+
+        &::before {
+          content: "";
+          width: 0%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          background: #9474ed49;
+          transition: width 500ms ease;
+        }
+
+        &:hover {
+          &::before {
+            width: 100%;
+          }
+        }
+
+        .uploadIcon {
+          font-size: clamp(10vw, 10rem, 8rem);
+          color: $accent;
+          margin-bottom: 2rem;
+          cursor: pointer;
+        }
+
+        &:hover {
+          .uploadTitle {
+            color: $accent;
+          }
+        }
+
+        .uploadTitle {
+          transition: color 500ms ease;
+        }
+      }
+    }
+
+    .PrimaryUploadImgContainer {
+      width: 100%;
+      min-height: 60vh;
+      overflow: hidden;
+      display: flex;
+      border-bottom: 3px solid #333645;
+
+      .left {
+        width: 33.33%;
+        max-height: 60vh;
+        display: flex;
+        justify-content: center;
+        border-right: 2px solid #333645;
+        padding-top: 1rem;
+
+        .primaryImg {
+          max-width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .right {
+        width: 65%;
+        padding: 10rem 0 0 2rem;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        max-height: 50vh;
+
+        .uploadInfoContainer {
+          display: flex;
+          margin-bottom: 1.5rem;
+          .infoUpload {
+            width: 8ch;
+            margin-bottom: 0;
+          }
+        }
+
+        .cta {
+          background: $accent;
+          padding: 0.4rem 1.5rem;
+          border-radius: 1.5rem;
+          cursor: pointer;
+          color: $text;
+          border: 2px solid $accent;
+          transition: 200ms ease;
+
+          &.alt {
+            background: none;
+          }
+
+          &:hover {
+            padding: 0.4rem 1.8rem;
+          }
+        }
+      }
+    }
+  }
+
+  .bottomContainer {
+    width: 100%;
+    display: flex;
+    min-height: 50vh;
+    max-height: 50vh;
+
+    .secondaryImgContainer {
+      width: 33.33%;
+      border-right: 2px solid #333645;
+
+      &:last-child {
+        border-right: 0;
+      }
+
+      .secondaryInput {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        cursor: pointer;
+        position: relative;
+
+        &::before {
+          content: "";
+          position: absolute;
+          width: 0%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          background: #9474ed49;
+          transition: width 500ms ease;
+        }
+
+        .secondaryIcon {
+          font-size: clamp(3vw, 7rem, 5rem);
+          color: $accent;
+        }
+
+        &:hover {
+          p {
+            color: $accent;
+          }
+
+          &::before {
+            width: 100%;
+          }
+        }
+
+        p {
+          transition: color 500ms ease;
+        }
+      }
+
+      .uploadedImg {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        position: relative;
+
+        &:hover {
+          .uploadOverlay {
+            opacity: 1;
+          }
+        }
+
+        .uploadOverlay {
+          position: absolute;
+          inset: 0;
+          background-color: rgba(36, 36, 36, 0.289);
+          backdrop-filter: blur(4px);
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          display: flex;
+          opacity: 0;
+          transition: 400ms ease;
+
+          .cta {
+            width: 20rem;
+            border: 2px solid $accent;
+            padding: 1rem;
+            margin-bottom: 2rem;
+            background: $accent;
+            text-align: center;
+            color: white;
+            border-radius: 2rem;
+            transition: 200ms ease;
+            cursor: pointer;
+
+            &.alt {
+              background: none;
+            }
+
+            &:hover {
+              width: 22rem;
+              background: $accent;
+            }
+          }
+        }
+
+        .secondaryImgFile {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: top;
+        }
+      }
+    }
+  }
+}
+
+.uploadBtnContainer {
+  width: 100%;
+
+  button {
+    width: 100%;
+    border: 2px solid $accent;
+    background: none;
+    color: $text;
+    padding: 1.25rem 0;
+    border-radius: 0.75rem;
+    transition: 450ms ease;
+
+    &:hover {
+      background: $accent;
+    }
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      &:hover {
+        background: $negative;
+        border-color: $negative;
+      }
+    }
+  }
+}
+
+.confirmModalContainer {
+  .modal-content {
+    background: $secondary;
+    padding: 1rem;
+    color: $text;
+
+    .modal-header,
+    .modal-footer {
+      border-bottom: none;
+      border-top: none;
+    }
+
+    .cta {
+      background: $accent;
+      padding: 0.4rem 1.5rem;
+      border-radius: 1.5rem;
+      cursor: pointer;
+      color: $text;
+      border: 2px solid $accent;
+      transition: 200ms ease;
+
+      &.alt {
+        background: none;
+      }
+
+      &:hover {
+        padding: 0.4rem 1.8rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+@import "./../../pallete.scss";
+
+.tableContainer {
+  width: 100%;
+  padding: 2rem;
+  background: $secondary;
+  border-radius: 1.5rem;
+
+  .title {
+    margin-bottom: 2rem;
+    font-size: 1.4rem;
+    opacity: 0.8;
+  }
+
+  .orderSub {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    .productImg {
+      width: 8rem;
+      margin-right: 1rem;
+    }
+  }
+}
+
+.css-1yhpg23-MuiTableCell-root,
+.css-1ndpvdd-MuiTableCell-root,
+.css-jdmf28-MuiTableCell-root,
+.css-1ex1afd-MuiTableCell-root {
+  color: #fff !important;
+}

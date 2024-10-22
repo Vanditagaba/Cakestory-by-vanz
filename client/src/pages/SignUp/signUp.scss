@@ -1,0 +1,95 @@
+@import "./../../pallete.scss";
+
+.signUpContainer {
+  width: 100%;
+  min-height: 90vh;
+  display: flex;
+
+  .left {
+    width: 35%;
+    min-height: 90vh;
+    background: $secondaryColor;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+    @media screen and (max-width: $layoutBreakpoint-md) {
+      display: none;
+    }
+
+    .signUpImg {
+      width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      opacity: 0.8;
+      filter: contrast(1.07);
+      transform: scaleX(-1);
+    }
+  }
+
+  .right {
+    width: 65%;
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (max-width: $layoutBreakpoint-md) {
+      width: 100%;
+    }
+
+    .formContainer {
+      width: 45rem;
+      height: 75rem;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-direction: column;
+      font-family: "Roboto Mono", monospace;
+      padding-top: 4rem;
+
+      @media screen and (max-width: 486px) {
+        width: 100%;
+        padding: 0 2rem;
+        padding-top: 4rem;
+      }
+
+      .heading {
+        font-size: 2.8rem;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+      }
+
+      .form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-top: 9rem;
+        margin-bottom: 4rem;
+
+        .formInput {
+          padding: 0.6rem 0.25rem;
+          background: none;
+          border: none;
+          border-bottom: 1px solid $secondaryColor;
+          margin-bottom: 3rem;
+
+          &::placeholder {
+            text-transform: uppercase;
+            letter-spacing: 2px;
+          }
+        }
+      }
+
+      .link {
+        margin-bottom: 1.5rem;
+        text-align: center;
+
+        .redirect {
+          text-decoration: underline;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

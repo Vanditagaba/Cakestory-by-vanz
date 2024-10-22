@@ -1,0 +1,161 @@
+@import "./../../pallete.scss";
+
+.signInContainer {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+
+  .left {
+    width: 50%;
+
+    @media screen and (max-width: 689px) {
+      display: none;
+    }
+  }
+
+  .right {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (max-width: 689px) {
+      width: 100%;
+    }
+
+    .formContainer {
+      width: 50%;
+      height: 55rem;
+      background: $secondary;
+      border-radius: 2.5rem;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-direction: column;
+      padding: 3rem 4rem;
+
+      @media screen and (max-width: 1217px) {
+        width: 70%;
+      }
+
+      @media screen and (max-width: 881px) {
+        width: 80%;
+      }
+
+      @media screen and (max-width: 788px) {
+        width: 95%;
+      }
+
+      @media screen and (max-width: 689px) {
+        width: 70%;
+      }
+
+      @media screen and (max-width: 463px) {
+        width: 95%;
+      }
+
+      @media screen and (max-width: 320px) {
+        padding: 3rem 2rem;
+      }
+
+      .title {
+        font-family: "Raleway", sans-serif;
+        letter-spacing: 2px;
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .subTitle {
+        font-size: 1.4rem;
+      }
+
+      .form {
+        margin-top: 6rem;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        width: 100%;
+        min-height: 40rem;
+
+        .bottom {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-top: 9.5rem;
+
+          .link {
+            font-size: 1.4rem;
+            opacity: 0.6;
+          }
+
+          .cta {
+            font-size: 1.5rem;
+            padding: 0.4rem 1.8rem;
+            border-radius: 1.5rem;
+            border: 0;
+            background: $accent;
+            color: $text;
+            transition: 200ms ease;
+
+            &:hover {
+              box-shadow: rgba(148, 116, 237, 0.25) 0px 4px 8px -2px,
+                rgba(148, 116, 237, 0.08) 0px 0px 0px 1px;
+              padding: 0.4rem 2.2rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.err {
+  color: $negative;
+  font-size: 1.4rem;
+}
+
+.persistLabel {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #9a9a9a;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #101114;
+  margin: 0;
+  font: inherit;
+  color: currentColor;
+  width: 1em;
+  height: 1em;
+  border: 0.15em solid $dark;
+  border-radius: 0.15em;
+  transform: translateY(-0.075em);
+  margin-right: 0.35rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+
+  &::before {
+    content: "";
+    width: 0.5em;
+    height: 0.5em;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1rem 1rem $accent;
+    align-self: center !important;
+  }
+
+  &:checked {
+    &::before {
+      transform: scale(1);
+    }
+  }
+}

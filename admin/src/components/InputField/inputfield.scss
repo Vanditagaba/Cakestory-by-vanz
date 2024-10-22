@@ -1,0 +1,63 @@
+@import "./../../pallete.scss";
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2.5rem;
+
+  .inputLabel {
+    font-size: 1.35rem;
+    margin-bottom: 1rem;
+    text-transform: capitalize;
+  }
+
+  .formInput {
+    padding: 0.7rem 0;
+    background: $dark;
+    border: 3px solid #333645;
+    border-radius: 1rem;
+    color: $text;
+    padding-left: 1rem;
+
+    &:focus {
+      border: 3px solid $accent;
+      outline: none;
+    }
+  }
+
+  .formSelect {
+    padding: 0.7rem 0;
+    background: $dark;
+    border: 3px solid #333645;
+    border-radius: 1rem;
+    color: $text;
+    padding-left: 1rem;
+    position: relative;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml,<svg height='10px' width='10px' viewBox='0 0 16 16'  xmlns='http://www.w3.org/2000/svg'><path fill='%239474ED' d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 1.35rem top 50%;
+    background-size: 1.35rem auto;
+
+    &:focus {
+      border: 3px solid $accent;
+      outline: none;
+    }
+
+    &:invalid {
+      border: 3px solid $negative;
+      outline: none;
+    }
+  }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}

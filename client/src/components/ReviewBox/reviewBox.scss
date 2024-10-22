@@ -1,0 +1,75 @@
+@import "./../../pallete.scss";
+
+.reviewBox {
+  width: 100%;
+  border-radius: 0.5rem;
+  background: #ebeaea;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-bottom: 4rem;
+
+  .top {
+    display: flex;
+    height: 7rem;
+    margin-bottom: 1rem !important;
+    border: 0;
+    display: flex;
+    border: 0 !important;
+
+    .left {
+      min-width: 10rem;
+      width: 5%;
+      height: 100%;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .pfp {
+        width: 5rem;
+        height: 5rem;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+    }
+
+    .right {
+      width: 95%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-direction: column;
+
+      .userName {
+        margin-bottom: 0.25rem;
+        text-transform: capitalize;
+      }
+
+      .rating {
+        .ratingUL {
+          list-style-type: none;
+          padding: 0;
+
+          .ratingList {
+            display: inline-block;
+            margin: 0;
+            margin-right: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+
+  .bottom {
+    width: 100%;
+    min-height: fit-content !important;
+
+    .reviewPara {
+      margin-bottom: 3rem;
+    }
+  }
+}

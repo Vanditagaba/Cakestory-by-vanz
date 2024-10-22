@@ -1,0 +1,197 @@
+@import "./../../pallete.scss";
+
+.dataTableContainer {
+  width: 100%;
+  height: 92vh;
+  padding: 2rem;
+  background: $secondary;
+  border-radius: 1.5rem;
+  display: flex;
+  flex-direction: column;
+
+  .titleContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .title {
+      margin-bottom: 2rem;
+      font-size: 1.4rem;
+      opacity: 0.8;
+    }
+
+    .cta {
+      margin-bottom: 2rem;
+      min-width: fit-content;
+      padding: 0.75rem 1.5rem;
+      border-radius: 2rem;
+      background: $accent;
+      border: 0;
+      color: $text;
+      transition: padding 200ms ease;
+
+      &:hover {
+        padding: 0.75rem 2rem;
+      }
+    }
+  }
+
+  .gridContainer {
+    height: 45rem;
+    flex-grow: 1;
+
+    .dataTable {
+      color: $text !important;
+      font-size: 1.4rem !important;
+      border: 0;
+      overflow-x: auto;
+
+      .tableCell {
+        .permsContainer {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 85%;
+
+          .cta {
+            &.view {
+              background: $positive;
+              transition: 200ms ease;
+
+              &:hover {
+                background: #41c796;
+              }
+            }
+
+            &.delete {
+              background: $negative;
+
+              &:hover {
+                background: #b5212b;
+              }
+            }
+
+            padding: 0.25rem 1.4rem;
+            border: 0;
+            border-radius: 1.25rem;
+            color: #000;
+          }
+        }
+      }
+
+      .MuiDataGrid-columnHeaders {
+        background: $dark;
+        border-left: 3px solid $dark !important;
+        border-bottom: 3px solid $dark;
+      }
+
+      .css-ptiqhd-MuiSvgIcon-root {
+        font-size: 1.8rem;
+        fill: $text;
+      }
+
+      .MuiDataGrid-cell {
+        border-bottom: 3px solid $dark;
+      }
+
+      .MuiDataGrid-virtualScrollerContent {
+        border-left: 3px solid $dark;
+        border-right: 3px solid $dark;
+      }
+
+      .MuiDataGrid-footerContainer {
+        border: 3px solid $dark;
+      }
+
+      .MuiButtonBase-root {
+        font-size: 1.3rem !important;
+        margin-bottom: 1rem;
+        color: $accent;
+        margin-right: 1rem;
+
+        &:hover {
+          background: $accent;
+          color: $text;
+        }
+      }
+
+      .MuiToolbar-root {
+        color: $text;
+      }
+    }
+  }
+}
+
+.MuiDataGrid-checkboxInput {
+  filter: grayscale(1);
+}
+
+.css-zylse7-MuiButtonBase-root-MuiIconButton-root.Mui-disabled {
+  opacity: 0 !important;
+}
+
+.css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root.Mui-checked,
+.css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root.MuiCheckbox-indeterminate {
+  filter: grayscale(0);
+}
+
+.MuiList-root {
+  width: 15rem;
+  border: 2px solid $accent;
+  background: $dark;
+  border-radius: 1rem;
+  color: $text;
+}
+
+.css-1ps6pg7-MuiPaper-root {
+  background: none !important;
+}
+
+.css-kk1bwy-MuiButtonBase-root-MuiMenuItem-root {
+  &:hover {
+    background: $accent !important;
+  }
+}
+
+.css-cveggr-MuiListItemIcon-root {
+  color: $text !important;
+}
+
+.css-kk1bwy-MuiButtonBase-root-MuiMenuItem-root.Mui-selected {
+  background: $accent !important;
+}
+
+.css-1t5wrdm-MuiDataGrid-filterForm {
+  @media screen and (max-width: 555px) {
+    flex-direction: column;
+  }
+
+  .css-rne967-MuiFormControl-root-MuiDataGrid-filterFormDeleteIcon {
+    @media screen and (max-width: 555px) {
+      display: flex;
+      align-items: flex-end;
+    }
+
+    .css-1pe4mpk-MuiButtonBase-root-MuiIconButton-root {
+      @media screen and (max-width: 555px) {
+        width: fit-content;
+      }
+    }
+  }
+
+  .css-q68e8e-MuiFormControl-root-MuiDataGrid-filterFormColumnInput {
+    @media screen and (max-width: 555px) {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.css-n3z9fz-MuiPopper-root-MuiDataGrid-panel,
+.css-154sxbz-MuiPaper-root-MuiDataGrid-paper,
+.css-1miuj5f-MuiDataGrid-panelWrapper {
+  @media screen and (max-width: 555px) {
+    max-width: 65vw;
+    overflow: hidden;
+  }
+}

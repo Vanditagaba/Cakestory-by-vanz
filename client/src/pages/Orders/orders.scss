@@ -1,0 +1,14 @@
+@import "../../pallete.scss";
+
+.orderSub {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  .productImg {
+    width: 8rem;
+    margin-right: 1rem;
+    border-radius: 0.25rem;
+    object-fit: cover;
+  }
+}
