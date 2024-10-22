@@ -13,8 +13,6 @@ import { resetCart } from "../../app/slice/cartSlice";
 import { BsFillCheckCircleFill, BsXCircleFill } from "react-icons/bs";
 
 const Home = () => {
-  const [menHover, setMenHover] = useState(false);
-  const [womenHover, setWomenHover] = useState(false);
   const dispatch = useDispatch();
   const [show, setShow] = useState(false);
 
@@ -99,10 +97,6 @@ const Home = () => {
       ));
   }
   document.title = "CakeStory by Vanz | HOME";
-
-  const changeState = (state, change) => {
-    state(change);
-  };
 
   return (
     <>
